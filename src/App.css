@@ -1,0 +1,143 @@
+* App.css */
+
+/* Root variables for easy theming */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #ffffff;
+  --accent-color: #FF5722;
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --input-background-color: #ffffff;
+  --input-border-color: #ccc;
+  --input-text-color: #333;
+  --button-hover-color: #45a049;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.note-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.note-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.note-input-item {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+  color: var(--input-border-color);
+}
+
+.primaryBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note-list-item h3 {
+  margin: 0;
+}
+
+.note-list-item p {
+  margin: 0;
+  color: #666;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .note-input {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
